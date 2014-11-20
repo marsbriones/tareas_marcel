@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+
+
+<meta charset="UTF-8">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+
+<title>Jquery1</title>
+
+	<style type="text/css" media="screen">
+	
+		.clear{
+			
+			clear:both;
+			}
+	
+	
+		.cuadro{
+		width:200px;
+		height:200px;
+		float:left;
+		margin:10px;
+		
+		}
+		
+		#rojo{
+			
+			background:red;
+			
+						
+			}
+			
+			#azul{
+			
+			background:blue;
+			display:none;			
+			}	
+			
+			#verde{
+			
+			background:green;
+			display:none;			
+			}	
+			
+			
+			#negro{
+			
+			background:black;
+			display:none;			
+			}	
+			
+			#naranja{
+			
+			background:orange;
+			display:none;			
+			}	
+	
+	</style>
+    <script type="text/javascript" charset="utf-8"> 
+    
+    	function aparece(){
+			
+			$("#rojo").show();
+			
+			};
+			
+			function desaparece(){
+				
+				$("#rojo").hide();
+				
+				
+				};
+				
+					
+			function fadein(){
+				
+				$("#azul").fadeIn(1000, function(){
+					$("#verde").fadeToggle(1000);
+				
+					});
+				
+				
+				};
+				
+					
+			function fadeout(){
+				
+				$("#azul").fadeOut(1000, function(){
+					$("#verde").fadeOut(1000);
+				
+					});
+				
+				};
+				
+					function fadetoggle(){
+				
+				$("#azul").fadeToggle(1000, function(){
+					$("#verde").fadeToggles(1000);
+				
+					});
+				
+				};
+				
+				
+						function slidetoggle(){
+				
+				$("#negro").slideToggle(1000);
+					
+				
+				};
+				
+				
+				
+				$(document).ready(function() { 
+				
+				$("#negro").click(function(){
+						$("#naranja").animate({
+							width:"500px",
+							backgroundColor:"#33CC33",
+							},1000)
+				
+					});
+				
+				
+					$("#rojo").click(function (){
+				     	$("#naranja").fadeIn(1000);
+						
+						});
+						
+					$("#azul").mouseenter(function (){
+				     	$("#naranja").fadeIn(300);
+						
+						});	
+				
+					$("#azul").mouseleave(function (){
+				     	$("#naranja").fadeOut(300);
+						
+						});
+						
+					$("#verde").mouseenter(function (){
+				     	$("#naranja").css("height", "300");
+						
+						});
+				
+					$('a').mouseleave(function (){
+				     	$("#naranja").css("height", "200");
+						
+						});
+				
+					$("#negro").click(function(){
+						$("#naranja").animate({
+							width:"500px",
+							backgroundColor:"#33CC33",
+							},1000)
+							
+						
+						});
+						
+							$("#naranja").mouseenter(function(){
+							$(this).animate({
+							backgroundColor:"#33CC33",
+							},1000)
+							
+						
+						});
+						
+				
+				});
+				
+				
+				
+    
+    </script>
+    
+    
+</head>
+
+<body>
+
+	<input type="button" value="Aparece" onClick="aparece();"></input>
+	<input type="button" value="Desaparece" onClick="desaparece();"></input>
+    
+    <input type="button" value="FadeIn" onClick="fadein();"></input>
+    <input type="button" value="FadeOut" onClick="fadeout();"></input>
+    
+    <input type="button" value="FadeToggle" onClick="fadetoggle();"></input>
+    
+     <input type="button" value="SlideToggle" onClick="slidetoggle();"></input>
+    
+    
+    <div class="clear"></div>    
+    
+    <div id="rojo" class="cuadro"></div>
+    <div id="azul" class="cuadro"></div>
+    <div id="verde" class="cuadro"><a href="#">HOLA</a></div>
+    <div id="negro" class="cuadro"></div>
+     <div id="naranja" class="cuadro"></div>
+
+    <div class="clear"></div>   
+
+</body>
+</html>
+

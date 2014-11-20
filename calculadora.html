@@ -1,0 +1,295 @@
+si <!doctype html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html;" charset="UTF-8">
+		<title>Calculadora</title>
+    
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400' rel='stylesheet' type='text/css'>
+        
+        	<script type="text/javascript" charset="utf-8">
+			
+			
+			    
+		function suma(){
+			 Suno = document.getElementById("sum1").value;
+			 Sdos = document.getElementById("sum2").value;
+			 
+			
+			var sum= document.getElementById("resuma").innerHTML =	parseFloat(Suno) + parseFloat(Sdos);
+			 document.getElementById("resuma").innerHTML = Math.round(sum*100)/100;
+		};
+			
+		
+				    
+		function resta(){
+			 Runo = document.getElementById("res1").value;
+			 Rdos = document.getElementById("res2").value;
+			
+			 var res= document.getElementById("resres").innerHTML =	parseFloat(Runo) - parseFloat(Rdos);
+			 document.getElementById("resres").innerHTML = Math.round(res*100)/100;
+		};
+		
+		
+				    
+		function multi(){
+			 Muno = document.getElementById("mul1").value;
+			 Mdos = document.getElementById("mul2").value;
+			
+			 var mul = document.getElementById("resmu").innerHTML =	parseFloat(Muno) * parseFloat(Mdos);
+			 		   document.getElementById("resmu").innerHTML = Math.round(mul*100)/100;
+			 
+		};
+		
+		function borrar(x){
+			if(x == 1){
+		document.getElementById("sum1").value="";
+		document.getElementById("sum2").value="";
+		document.getElementById("resuma").innerHTML="";
+		
+			}else if (x == 2){
+		document.getElementById("res1").value="";
+		document.getElementById("res2").value="";
+		document.getElementById("resres").innerHTML="";
+			}else if (x == 3){
+		document.getElementById("mul1").value="";
+		document.getElementById("mul2").value="";
+		document.getElementById("resmu").innerHTML="";
+			}
+				};	
+			
+			
+			</script>
+        
+        <style>
+		
+		@charset "UTF-8";
+/* CSS Document */
+
+
+html, body{
+font-family: 'Josefin Sans', sans-serif;
+background-color: #bdc3c7; 
+color:#000;
+text-align:center;
+margin:0;
+padding:0;
+			}
+			
+			
+#titulo{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	top: 76px;
+}
+
+#titulo h1{
+	margin: 0;
+	padding: 0;
+	color: black;
+	margin-bottom:30px;
+}
+			
+.wrap
+{
+	width: 960px;
+	margin: 0 auto;
+}
+			
+			
+#azul
+{
+	width:305px;
+	height:500px;
+	margin-right:5px;
+	float:left;	
+	
+	}	
+	
+#rojo
+{
+	width:305px;
+	height:500px;
+	margin-right:5px;
+	float:left;
+	
+	}	
+	
+#verde
+{
+	width:305px;
+	height:500px;
+	float:left;	
+	}					
+			
+			
+.respuesta
+
+{
+	
+	width:160px;
+	height:100px;
+	font-size:80px;
+	text-align:center;
+	margin-left:37px;
+	margin-top: 60px;
+	position: relative;
+	right:-30px;
+	font-family: 'Josefin Sans', sans-serif;
+	}			
+						
+									
+titulo2 {
+font-family: 'Josefin Sans', sans-serif;
+color:rgba(102,102,102,1);
+font-size: 16px;
+}
+			
+#headers ul
+{
+text-align:center;
+}
+
+#headers li
+{
+display:inline-block;
+}
+
+#center
+{
+	
+	width:300px;
+	height:200px;
+	margin-top:160px;
+
+	
+}
+
+#headers a
+{
+text-transform: uppercase;
+font-family: 'Oswald', sans-serif; 
+display: block;
+line-height: 40px;
+padding: 0 12px;
+color: #000;
+text-decoration: none;
+					
+	}
+	
+	#headers li	
+
+{
+display:inline-block;
+		}
+
+/* CSS DE INPUTS */
+
+
+.operacion{
+	border-style: none;
+	border-radius: 10px;
+	width: 40px;
+	height: 40px;
+	color: white;
+	background-color: #2ECC71;
+}
+
+.borrador{
+	border-style: none;
+	border-radius: 10px;
+	width: 40px;
+	height: 40px;
+	background-color: #e74c3c;
+	color: white;
+}
+
+.numeros{
+	border-style: none;
+	border-radius: 10px;
+	width: 80px;
+	height: 40px;
+	color: #2c3e50;
+	font-size: 16px;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+
+		
+
+		
+		</style>
+        
+        
+    </head>
+    <body>   
+		
+		
+	    
+        <div id="titulo"><h2>THE SUPER CALCULATOR</h2></div>
+		
+        
+        <div class="wrap">
+        <div id="azul">
+        		
+        		<div id="center">
+        		<h3>Suma</h3>
+    			 <input class="numeros" type="text" name="sum1" value="" id="sum1" size="5"  maxlength="6" >
+                 +
+				 <input class="numeros" type="text" name="sum2" value="" id="sum2" size="5" maxlength="6">
+              	 <input class="operacion" type="button" name="sum" value="=" id="sum" onClick="suma();">
+                 <input class="borrador" type="button" name="borrar" value="C" id="borrar" onClick="borrar(1);">
+                    <div class="respuesta" id="resuma"></div>
+         </div>        
+                 
+                 
+        
+        </div>
+        
+        <div id="rojo">
+        	 <div id="center">
+        	 	<h3>Resta</h3>
+				<input class="numeros" type="text" name="res1" value="" id="res1" size="5"  maxlength="6" >
+                -
+				<input class="numeros" type="text" name="res2" value="" id="res2" size="5"  maxlength="6"> 
+     			<input class="operacion" type="button" name="rest" value="=" id="rest" id="resta" onClick="resta();">
+                <input class="borrador" type="button" name="borrar" value="C" id="borrar" onClick="borrar(2);">
+                <div class="respuesta" id="resres" ></div>
+       </div>  
+
+				 
+        </div>
+        
+        
+        
+        <div id="verde">
+        <div id="center">
+        		<h3>Multiplicación</h3>
+        
+			 	 <input class="numeros" type="text" name="mul1" value="" id="mul1" size="5"  maxlength="6">
+                 x
+				 <input class="numeros" type="text" name="mul2" value="" id="mul2"size="5"  maxlength="6" >
+        			    
+                 <input class="operacion" type="button" name="mult" value="=" id="multi" onClick="multi();">
+                 <input class="borrador" type="button" name="borrar" value="C" id="borrar" onClick="borrar(3);">
+				<div class="respuesta" id="resmu"></div>
+             </div>  
+        
+          
+        </div>
+        
+        <div id="titulo2">MAKING MATHS EASIER SINCE 1872</div>
+	
+		</div>
+			
+	
+    
+	</body>
+    
+    </html>
+
+
+

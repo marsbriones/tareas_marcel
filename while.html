@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<meta charset="UTF-8">
+<title>Ciclos</title>
+
+	<style type="text/css" media="screen">
+	
+	
+	.marca{
+		float:left;
+		width:150px;
+		height:40px;
+		line-height:40px;
+		text-align:center;
+		background:blue;
+		color:white;
+		margin:5px;
+		
+		}
+		
+		.crece{
+			
+			background:yellow;
+			font-size:50px;
+			
+			}
+	
+	</style>
+</head>
+
+<body>
+
+<p id="modifica">Este parrafo va modificar</p>
+
+
+<button onClick="myFunction()">Try it </button>
+<button onClick="borrar()">Clean </button>
+
+<p id="demo"></p>
+
+
+
+
+<script>
+
+
+function myFunction(){
+cars = ["BMW", "Volvo", "Saab", "Ford","Volkswagen","Ferrari","Lamborghini","Mercedes","Aston Martin"," Bugatti" ,"Audi"];
+var i = 0;
+var text = "";
+while (cars[i]) {
+    text += "<div class='marca'>" + cars[i] + "</div>";
+    i++;
+
+}
+
+$("#modifica").addClass("crece");
+
+
+document.getElementById("demo").innerHTML = text;
+}
+
+
+function borrar(){
+	
+document.getElementById("demo").innerHTML = "";
+	
+	}
+
+//function myFunction(){
+//	var text="";
+//	var i = 0;
+//	while (i < 10) {
+//		text += "<br>The number is " + i + "</br>";
+//		i++;	
+	
+//	}
+//	document.getElementById("demo").innerHTML = text;
+//}
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<meta charset="UTF-8">
+<title>Ciclo For</title>
+
+	<style type="text/css" media="screen">
+	
+	
+	.marca{
+		float:left;
+		width:150px;
+		height:40px;
+		line-height:40px;
+		text-align:center;
+		background:green;
+		color:white;
+		margin:5px;
+		
+		}
+		
+	
+	</style>
+</head>
+
+<body>
+
+
+
+
+<button onClick="myFunction()">Try it </button>
+<button onClick="borrar()">Clean </button>
+
+<p id="demo"></p>
+
+
+
+
+<script>
+
+
+function myFunction(){
+dogs = ["Labrador", "Xoloscuincle", "Golden Retriever", "Pastor Aleman","Dalmata","Husky","Mastin" ];
+text = "";
+var i;
+for (i = 0; i < dogs.length; i++) {
+    text += "<div class='marca'>" + dogs[i] + "</div>";
+}
+
+
+
+
+document.getElementById("demo").innerHTML = text;
+
+}
+
+function borrar(){
+	
+document.getElementById("demo").innerHTML = "";
+	
+	}
+
+//function myFunction(){
+//	var text="";
+//	var i = 0;
+//	while (i < 10) {
+//		text += "<br>The number is " + i + "</br>";
+//		i++;	
+	
+//	}
+//	document.getElementById("demo").innerHTML = text;
+//}
+
+</script>
+
+
+
+
+
+</body>
+</html>
